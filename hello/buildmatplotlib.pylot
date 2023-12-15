@@ -1,0 +1,63 @@
+import pandas as pd
+import import pandas as pd
+import matplotlib.pyplot as plt
+
+# Replace 'your_file.csv' with the actual path or URL of your CSV file
+file_path = 'your_file.csv'
+
+# Read the CSV file into a DataFrame
+df = pd.read_csv(file_path)
+
+# Calculate the total profit for all months
+total_profit = df['Profit'].sum()
+
+# Display the total profit
+print(f'Total Profit for all months: {total_profit}')
+
+# Create a line plot
+plt.figure(figsize=(10, 6))
+
+# Plot the line with specified style properties
+plt.plot(df['Month'], df['Profit'], marker='o', linestyle='-', color='b', label='Monthly Profit')
+
+# Add labels and title
+plt.xlabel('Month')
+plt.ylabel('Profit')
+plt.title('Monthly Profit Over Time')
+
+# Add legend
+plt.legend()
+
+# Display the plot
+plt.show()
+.pyplot as plt
+
+# Replace 'your_file.csv' with the actual path or URL of your CSV file
+file_path = 'your_file.csv'
+
+# Read the CSV file into a DataFrame
+df = pd.read_csv(file_path)
+
+# Calculate the total profit for all months
+total_profit = df['Profit'].sum()
+
+# Display the total profit
+print(f'Total Profit for all months: {total_profit}')
+
+# Create a line plot
+plt.figure(figsize=(10, 6))
+
+# Plot the line with specified style properties
+plt.plot(df['Month'], df['Profit'], marker='o', linestyle='-', color='b', label='Monthly Profit')
+
+# Add labels and title
+plt.xlabel('Month')
+plt.ylabel('Profit')
+plt.title('Monthly Profit Over Time')
+
+# Add legend
+plt.legend()
+
+# Display the plot
+plt.show()
+
