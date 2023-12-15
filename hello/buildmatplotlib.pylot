@@ -61,3 +61,33 @@ plt.legend()
 # Display the plot
 plt.show()
 
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Replace 'your_file.csv' with the actual path or URL of your CSV file
+file_path = 'your_file.csv'
+
+# Read the CSV file into a DataFrame
+df = pd.read_csv(file_path)
+
+# Create a multiline plot with a separate line for each product
+plt.figure(figsize=(10, 6))
+
+# Get unique product names
+products = df['Product'].unique()
+
+# Plot a separate line for each product
+for product in products:
+    product_data = df[df['Product'] == product]
+    plt.plot(product_data['Month'], product_data['Units Sold'], marker='o', label=product)
+
+# Add labels and title
+plt.xlabel('Month')
+plt.ylabel('Units Sold')
+plt.title('Number of Units Sold Per Month for Each Product')
+
+# Add legend
+plt.legend()
+
+# Display the plot
+plt.show()
